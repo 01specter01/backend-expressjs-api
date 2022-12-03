@@ -6,9 +6,9 @@ const app = express();
 const server = app.listen(3011, () => {
     console.log("start");
 });
-app.get ("/user", (request, response) => {
-    response.json()
-})
+app.get("/data", (request, response) => {
+    response.json(data);
+});
 app.get("/user/:id", (request, response) => {
     const result = user.find((el) => el.id === +request.params.id);
 
